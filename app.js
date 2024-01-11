@@ -41,7 +41,7 @@ app.post('/register', async (request, response) => {
     INSERT INTO 
       user(username, name, password, gender, location)
     VALUES
-      ('${username}',' ${name}', '${hashedpassword}', '${gender}', '${location}');
+      ('${username}','${name}', '${hashedpassword}', '${gender}', '${location}');
     `
     if (password.length > 5) {
       const query_result = await db.run(addNewUser)
